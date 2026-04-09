@@ -15,18 +15,18 @@ const STYLES = `
   font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 
-  --pill-bg-1: color-mix(in oklch, var(--foreground) 3%, transparent);
-  --pill-bg-2: color-mix(in oklch, var(--foreground) 1%, transparent);
-  --pill-shadow: color-mix(in oklch, var(--background) 50%, transparent);
-  --pill-highlight: color-mix(in oklch, var(--foreground) 10%, transparent);
-  --pill-inset-shadow: color-mix(in oklch, var(--background) 80%, transparent);
-  --pill-border: color-mix(in oklch, var(--foreground) 8%, transparent);
+  --pill-bg-1: color-mix(in srgb, hsl(var(--foreground)) 3%, transparent);
+  --pill-bg-2: color-mix(in srgb, hsl(var(--foreground)) 1%, transparent);
+  --pill-shadow: color-mix(in srgb, hsl(var(--background)) 50%, transparent);
+  --pill-highlight: color-mix(in srgb, hsl(var(--foreground)) 10%, transparent);
+  --pill-inset-shadow: color-mix(in srgb, hsl(var(--background)) 80%, transparent);
+  --pill-border: color-mix(in srgb, hsl(var(--foreground)) 8%, transparent);
 
-  --pill-bg-1-hover: color-mix(in oklch, var(--foreground) 8%, transparent);
-  --pill-bg-2-hover: color-mix(in oklch, var(--foreground) 2%, transparent);
-  --pill-border-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
-  --pill-shadow-hover: color-mix(in oklch, var(--background) 70%, transparent);
-  --pill-highlight-hover: color-mix(in oklch, var(--foreground) 20%, transparent);
+  --pill-bg-1-hover: color-mix(in srgb, hsl(var(--foreground)) 8%, transparent);
+  --pill-bg-2-hover: color-mix(in srgb, hsl(var(--foreground)) 2%, transparent);
+  --pill-border-hover: color-mix(in srgb, hsl(var(--foreground)) 20%, transparent);
+  --pill-shadow-hover: color-mix(in srgb, hsl(var(--background)) 70%, transparent);
+  --pill-highlight-hover: color-mix(in srgb, hsl(var(--foreground)) 20%, transparent);
 }
 
 @keyframes footer-breathe {
@@ -40,8 +40,8 @@ const STYLES = `
 }
 
 @keyframes footer-heartbeat {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px color-mix(in oklch, var(--destructive) 50%, transparent)); }
-  15%, 45% { transform: scale(1.2); filter: drop-shadow(0 0 10px color-mix(in oklch, var(--destructive) 80%, transparent)); }
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px color-mix(in srgb, hsl(var(--destructive)) 50%, transparent)); }
+  15%, 45% { transform: scale(1.2); filter: drop-shadow(0 0 10px color-mix(in srgb, hsl(var(--destructive)) 80%, transparent)); }
   30% { transform: scale(1); }
 }
 
@@ -60,8 +60,8 @@ const STYLES = `
 .footer-bg-grid {
   background-size: 60px 60px;
   background-image:
-    linear-gradient(to right, color-mix(in oklch, var(--foreground) 3%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklch, var(--foreground) 3%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in srgb, hsl(var(--foreground)) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, hsl(var(--foreground)) 5%, transparent) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
 }
@@ -69,8 +69,8 @@ const STYLES = `
 .footer-aurora {
   background: radial-gradient(
     circle at 50% 50%,
-    color-mix(in oklch, var(--primary) 15%, transparent) 0%,
-    color-mix(in oklch, var(--secondary) 15%, transparent) 40%,
+    color-mix(in srgb, hsl(var(--primary)) 20%, transparent) 0%,
+    color-mix(in srgb, hsl(var(--primary)) 8%, transparent) 40%,
     transparent 70%
   );
 }
@@ -93,7 +93,7 @@ const STYLES = `
   box-shadow:
     0 20px 40px -10px var(--pill-shadow-hover),
     inset 0 1px 1px var(--pill-highlight-hover);
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .footer-giant-bg-text {
@@ -102,18 +102,18 @@ const STYLES = `
   font-weight: 900;
   letter-spacing: -0.05em;
   color: transparent;
-  -webkit-text-stroke: 1px color-mix(in oklch, var(--foreground) 5%, transparent);
-  background: linear-gradient(180deg, color-mix(in oklch, var(--foreground) 10%, transparent) 0%, transparent 60%);
+  -webkit-text-stroke: 1px color-mix(in srgb, hsl(var(--foreground)) 12%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, hsl(var(--foreground)) 18%, transparent) 0%, transparent 60%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .footer-text-glow {
-  background: linear-gradient(180deg, var(--foreground) 0%, color-mix(in oklch, var(--foreground) 40%, transparent) 100%);
+  background: linear-gradient(180deg, hsl(var(--foreground)) 0%, color-mix(in srgb, hsl(var(--foreground)) 40%, transparent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0px 0px 20px color-mix(in oklch, var(--foreground) 15%, transparent));
+  filter: drop-shadow(0px 0px 20px color-mix(in srgb, hsl(var(--foreground)) 15%, transparent));
 }
 `;
 
