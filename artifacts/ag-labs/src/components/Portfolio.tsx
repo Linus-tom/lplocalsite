@@ -1,4 +1,4 @@
-import { projects } from "./HeroParallax";
+import { projects } from "@/data/projects";
 import { ArrowRight } from "lucide-react";
 
 export function Portfolio() {

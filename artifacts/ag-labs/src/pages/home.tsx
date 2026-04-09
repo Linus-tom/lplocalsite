@@ -152,14 +152,16 @@ function CTAFinal() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <HeroParallax />
-      <Portfolio />
-      <Pricing />
-      <HowItWorks />
-      <SocialProof />
-      <FAQ />
-      <CTAFinal />
+    <div className="bg-background">
+      <div className="relative z-10 bg-background">
+        <HeroParallax />
+        <Portfolio />
+        <Pricing />
+        <HowItWorks />
+        <SocialProof />
+        <FAQ />
+        <CTAFinal />
+      </div>
       <CinematicFooter />
     </div>
   );

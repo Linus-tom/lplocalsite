@@ -1,23 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, useReducedMotion } from "framer-motion";
-
-export const projects = [
-  { title: "Barbearia Silva", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png" },
-  { title: "Advocacia Prates", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png" },
-  { title: "Restaurante Dona Maria", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png" },
-  { title: "Clínica Estética Luz", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png" },
-  { title: "Auto Peças JR", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png" },
-  { title: "Pizzaria Napolitana", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png" },
-  { title: "Imobiliária Central", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png" },
-  { title: "Dentista Sorriso", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png" },
-  { title: "Studio Fitness", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png" },
-  { title: "Pet Shop Amigo Fiel", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png" },
-  { title: "Farmácia Saúde", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png" },
-  { title: "Escola de Idiomas", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png" },
-  { title: "Arquitetura & Design", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png" },
-  { title: "Contabilidade Ativa", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png" },
-  { title: "Loja de Móveis", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png" },
-];
+import { projects } from "@/data/projects";
 
 export function HeroParallax() {
   const firstRow = projects.slice(0, 5);
@@ -61,7 +44,7 @@ export function HeroParallax() {
   return (
     <div
       ref={ref}
-      className="h-[150vh] sm:h-[180vh] md:h-[220vh] py-20 lg:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[250vh] sm:h-[280vh] md:h-[300vh] py-20 lg:py-40 overflow-x-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight text-white mb-6">

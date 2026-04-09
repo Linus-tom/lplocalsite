@@ -1,0 +1,17 @@
+export const projects = [
+  { title: "Barbearia Silva", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png" },
+  { title: "Advocacia Prates", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png" },
+  { title: "Restaurante Dona Maria", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png" },
+  { title: "Clínica Estética Luz", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png" },
+  { title: "Auto Peças JR", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png" },
+  { title: "Pizzaria Napolitana", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png" },
+  { title: "Imobiliária Central", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png" },
+  { title: "Dentista Sorriso", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png" },
+  { title: "Studio Fitness", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png" },
+  { title: "Pet Shop Amigo Fiel", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png" },
+  { title: "Farmácia Saúde", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png" },
+  { title: "Escola de Idiomas", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png" },
+  { title: "Arquitetura & Design", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png" },
+  { title: "Contabilidade Ativa", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png" },
+  { title: "Loja de Móveis", link: "#", thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png" },
+];
