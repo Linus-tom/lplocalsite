@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AG Labs — Agência Digital"
+version = "1.0.0"
+id = "artifacts/ag-labs"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23490
+
+[services.development]
+run = "pnpm --filter @workspace/ag-labs run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ag-labs", "run", "build" ]
+publicDir = "artifacts/ag-labs/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23490"
+BASE_PATH = "/"
