@@ -35,9 +35,9 @@ export function Pricing() {
             </ul>
           </div>
           
-          <div className="bg-background border border-primary/30 p-8 md:p-12 rounded-3xl shadow-[0_0_50px_-12px_hsl(var(--primary)/0.3)] relative overflow-hidden">
+          <div className="bg-background border border-primary/30 p-8 md:p-12 rounded-xl shadow-[0_0_50px_-12px_hsl(var(--primary)/0.3)] relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4">
-              <div className="text-xs font-bold px-3 py-1 bg-primary/20 text-primary rounded-full uppercase tracking-wider">
+              <div className="text-xs font-bold px-3 py-1 bg-primary/20 text-primary rounded-md uppercase tracking-wider">
                 Mais Popular
               </div>
             </div>
@@ -64,7 +64,7 @@ export function Pricing() {
             
             <a 
               href="https://wa.me/5511999999999"
-              className="block w-full text-center py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg"
+              className="block w-full text-center py-4 rounded-md bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg"
             >
               Quero meu site agora →
             </a>

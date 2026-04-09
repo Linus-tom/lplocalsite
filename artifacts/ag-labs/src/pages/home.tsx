@@ -1,7 +1,7 @@
 import { HeroParallax } from "@/components/HeroParallax";
 import { Portfolio } from "@/components/Portfolio";
 import { Pricing } from "@/components/Pricing";
-import { Footer } from "@/components/Footer";
+import { CinematicFooter } from "@/components/CinematicFooter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Zap, Search, Globe, ChevronRight } from "lucide-react";
 
@@ -137,7 +137,7 @@ function CTAFinal() {
         
         <a 
           href="https://wa.me/5511999999999"
-          className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-primary bg-primary-foreground rounded-full hover:scale-105 transition-transform shadow-2xl"
+          className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-primary bg-primary-foreground rounded-lg hover:scale-105 transition-transform shadow-2xl"
         >
           Quero ver meu site <ChevronRight className="ml-2 w-6 h-6" />
         </a>
@@ -160,7 +160,7 @@ export default function Home() {
       <SocialProof />
       <FAQ />
       <CTAFinal />
-      <Footer />
+      <CinematicFooter />
     </div>
   );
 }

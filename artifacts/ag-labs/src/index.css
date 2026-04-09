@@ -129,7 +129,7 @@
   --app-font-display: 'Space Grotesk', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
-  --radius: 0.75rem;
+  --radius: 0.25rem;
   
   color-scheme: dark;
 }
