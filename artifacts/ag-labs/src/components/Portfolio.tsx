@@ -6,62 +6,125 @@ import {
   SliderBtn,
 } from '@/components/ui/progressive-carousel';
 
+const base = "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/";
+
 const cases = [
   {
-    sliderName: 'nutricionista',
-    tag: 'Landing Page',
-    title: 'LP Nutricionista',
-    desc: 'Página de captação para nutricionista com foco em emagrecimento. Alta conversão com formulário integrado, depoimentos e gatilhos de urgência.',
-    result: '+340% de leads em 30 dias',
-    img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1170&auto=format&fit=crop',
+    sliderName: 'agente-ia',
+    tag: 'IA / SaaS',
+    title: 'Agente de IA Consultivo',
+    desc: 'Plataforma com agente de IA que responde dúvidas, qualifica leads e agenda reuniões automaticamente — 24h por dia, sem intervenção humana.',
+    result: '98% de resolução automática',
+    link: 'https://rag.aglabs.api.br/',
+    img: `${base}agente%20ia.png`,
   },
   {
-    sliderName: 'aglabs',
-    tag: 'Site Institucional',
-    title: 'AG Labs — Institucional',
-    desc: 'Site institucional da própria agência com seções de portfólio, preços, depoimentos e CTA direto para o WhatsApp. Design dark com acento verde.',
-    result: 'Você está aqui agora',
-    img: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1169&auto=format&fit=crop',
-  },
-  {
-    sliderName: 'ebooks',
-    tag: 'E-commerce',
-    title: 'Loja de Ebooks',
-    desc: 'E-commerce completo para venda de ebooks digitais com checkout integrado, área de membros e entrega automática por e-mail.',
-    result: 'R$ 18k em vendas no 1º mês',
-    img: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1170&auto=format&fit=crop',
-  },
-  {
-    sliderName: 'barberpro',
+    sliderName: 'barber-pro',
     tag: 'SaaS B2B',
     title: 'Barber Pro',
-    desc: 'Plataforma SaaS para barbearias com agendamento online, gestão de clientes, fila de espera e painel de relatórios. Escalável para franquias.',
+    desc: 'Plataforma SaaS para barbearias com agendamento online, fila de espera, gestão de clientes e painel de relatórios. Escalável para franquias.',
     result: '47 barbearias ativas',
-    img: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1170&auto=format&fit=crop',
+    link: 'https://barber.aglabs.ia.br/',
+    img: `${base}barber%20pro.png`,
   },
   {
-    sliderName: 'vendas',
-    tag: 'Página de Vendas',
-    title: 'VSL de Curso Online',
-    desc: 'Página de vendas de longa duração com VSL, copy persuasiva, bônus, garantia e checkout. Otimizada para tráfego pago (Meta Ads & Google).',
-    result: 'ROAS médio de 4,2x',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1170&auto=format&fit=crop',
+    sliderName: 'boutique',
+    tag: 'E-commerce',
+    title: 'Boutique Santo Ofício',
+    desc: 'Loja de roupas premium com lookbook interativo, filtros por coleção e checkout com integração de pagamento. Experiência mobile-first.',
+    result: '+85% conversão mobile',
+    link: 'https://santoficio-rv.pages.dev/',
+    img: `${base}boutique%20de%20roupas.png`,
   },
   {
-    sliderName: 'linkinbio',
-    tag: 'Link na Bio',
-    title: 'Link na Bio Premium',
-    desc: 'Página de link na bio com design personalizado, links para WhatsApp, redes sociais, produtos e captura de e-mail. Carrega em menos de 1s.',
-    result: '12k cliques/mês',
-    img: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1074&auto=format&fit=crop',
+    sliderName: 'nutri',
+    tag: 'Landing Page',
+    title: 'LP Gabi Nutri',
+    desc: 'Página de captação para nutricionista com foco em emagrecimento. Copy persuasiva, depoimentos reais e formulário de agendamento integrado.',
+    result: '+340% de leads em 30 dias',
+    link: 'https://gabinutri.com.br/',
+    img: `${base}lp%20nutri.png`,
+  },
+  {
+    sliderName: 'ag-app',
+    tag: 'Web App',
+    title: 'AG Labs — App',
+    desc: 'Dashboard completo para gestão de projetos, clientes e entregas da agência. Interface limpa com autenticação, notificações e relatórios.',
+    result: 'Gestão centralizada de projetos',
+    link: 'https://app.agmusic.cloud/',
+    img: `${base}app%20ag%20labs.png`,
+  },
+  {
+    sliderName: 'agbooks',
+    tag: 'E-commerce',
+    title: 'AG Books',
+    desc: 'Loja de ebooks digitais com checkout integrado, área de membros protegida por login e entrega automática por e-mail após pagamento.',
+    result: 'R$ 18k em vendas no 1º mês',
+    link: 'https://loja.agmusic.cloud/',
+    img: `${base}agbooks.png`,
+  },
+  {
+    sliderName: 'aqua-nature',
+    tag: 'E-commerce',
+    title: 'Aqua Nature',
+    desc: 'Loja de produtos naturais e cosméticos com identidade visual premium, páginas de produto detalhadas e integração com marketplace.',
+    result: '+60% no ticket médio',
+    link: 'https://aqua-nature-rv.pages.dev/',
+    img: `${base}psicnas%20naturais.png`,
+  },
+  {
+    sliderName: 'lp-barber',
+    tag: 'Landing Page',
+    title: 'LP Alcateia Barber',
+    desc: 'Landing page de alta conversão para barbearia premium com galeria de cortes, sistema de agendamento e prova social com Google Reviews.',
+    result: '3x mais agendamentos',
+    link: 'https://alcateia-rv.pages.dev/',
+    img: `${base}lp%20barber.png`,
+  },
+  {
+    sliderName: 'ag-plataforma',
+    tag: 'Web App',
+    title: 'AG Labs — Plataforma IA',
+    desc: 'Hub centralizado de agentes de IA, automações e integrações. Interface para criação, monitoramento e gerenciamento de fluxos inteligentes.',
+    result: 'Automações 24/7 ativas',
+    link: 'https://rag.aglabs.api.br/app',
+    img: `${base}ag%20labs%202.png`,
+  },
+  {
+    sliderName: 'ag-music',
+    tag: 'Site Institucional',
+    title: 'AG Music',
+    desc: 'Plataforma institucional para artistas independentes com player integrado, blog, agenda de shows e área de fãs exclusiva.',
+    result: '50k streams/mês',
+    link: 'https://agmusic.cloud/',
+    img: `${base}ag%20labs.png`,
+  },
+  {
+    sliderName: 'canyon',
+    tag: 'Template',
+    title: 'Canyon — Template Premium',
+    desc: 'Template de site para negócios ao ar livre, ecoturismo e aventura. Design imersivo com parallax, galeria de fotos e formulário de reserva.',
+    result: 'Entrega em 48h',
+    link: '#',
+    img: `${base}hero%20canyon.png`,
+  },
+  {
+    sliderName: 'business',
+    tag: 'Template',
+    title: 'Business Simples',
+    desc: 'Template clean e profissional para empresas e prestadores de serviço. Rápido de publicar e fácil de editar. Inclui domínio e hospedagem.',
+    result: 'Entrega em 48h',
+    link: '#',
+    img: `${base}busines%20simples.png`,
   },
   {
     sliderName: 'templates',
     tag: 'Templates',
     title: 'Pack de Templates',
-    desc: 'Coleção de templates prontos para negócios locais — barbearia, restaurante, clínica, advogado e mais. Entrega em 48h com personalização.',
+    desc: 'Coleção de templates prontos para negócios locais — barbearia, restaurante, clínica, advogado e mais. Personalizados com sua marca em 48h.',
     result: '+200 negócios atendidos',
-    img: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=1164&auto=format&fit=crop',
+    link: '#',
+    img: `${base}templates%202.png`,
   },
 ];
 
@@ -79,7 +142,7 @@ export function Portfolio() {
           </p>
         </div>
 
-        <ProgressSlider activeSlider="nutricionista" duration={6000} className="w-full">
+        <ProgressSlider activeSlider="agente-ia" duration={6000} className="w-full">
           <SliderContent>
             {cases.map((item) => (
               <SliderWrapper key={item.sliderName} value={item.sliderName}>
@@ -87,18 +150,30 @@ export function Portfolio() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-8">
                     <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-3">
                       {item.tag}
                     </span>
                     <h3 className="text-2xl md:text-4xl font-black text-white mb-2">{item.title}</h3>
                     <p className="text-white/70 text-sm md:text-base max-w-lg">{item.desc}</p>
-                    <div className="mt-4 inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded px-4 py-2">
-                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                      <span className="text-primary font-bold text-sm">{item.result}</span>
+                    <div className="mt-4 flex items-center gap-4 flex-wrap">
+                      <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded px-4 py-2">
+                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                        <span className="text-primary font-bold text-sm">{item.result}</span>
+                      </div>
+                      {item.link !== '#' && (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-medium transition-colors"
+                        >
+                          Ver projeto →
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -106,18 +181,18 @@ export function Portfolio() {
             ))}
           </SliderContent>
 
-          <SliderBtnGroup className="mt-4 bg-card/60 border border-border/50 backdrop-blur-md overflow-hidden grid grid-cols-2 md:grid-cols-4 rounded-lg">
+          <SliderBtnGroup className="mt-4 bg-card/60 border border-border/50 backdrop-blur-md overflow-hidden grid grid-cols-4 md:grid-cols-7 rounded-lg">
             {cases.map((item) => (
               <SliderBtn
                 key={item.sliderName}
                 value={item.sliderName}
-                className="text-left cursor-pointer p-4 border-r border-b border-border/30 transition-colors hover:bg-white/5"
+                className="text-left cursor-pointer p-3 border-r border-b border-border/30 transition-colors hover:bg-white/5"
                 progressBarClass="bg-primary/20 h-full top-0"
               >
-                <span className="relative inline-block text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 border border-primary/30 px-2 py-0.5 rounded mb-2">
+                <span className="relative inline-block text-[9px] font-bold uppercase tracking-widest text-primary bg-primary/10 border border-primary/30 px-2 py-0.5 rounded mb-1.5">
                   {item.tag}
                 </span>
-                <p className="text-xs md:text-sm font-semibold text-foreground/80 line-clamp-2 leading-snug">
+                <p className="text-[11px] font-semibold text-foreground/80 line-clamp-2 leading-snug">
                   {item.title}
                 </p>
               </SliderBtn>
