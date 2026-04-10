@@ -128,7 +128,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl overflow-hidden"
+      className="group/product w-[30rem] aspect-[4/3] relative flex-shrink-0 rounded-xl overflow-hidden"
     >
       <a
         href={product.link}
