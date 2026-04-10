@@ -93,7 +93,7 @@ export function Portfolio() {
           <SliderContent>
             {cases.map((item) => (
               <SliderWrapper key={item.sliderName} value={item.sliderName}>
-                <div className="relative rounded-xl overflow-hidden w-full" style={{ height: '500px' }}>
+                <div className="relative rounded-xl overflow-hidden w-full aspect-[16/9] md:aspect-[2/1]">
                   <img
                     src={item.img}
                     alt={item.title}
