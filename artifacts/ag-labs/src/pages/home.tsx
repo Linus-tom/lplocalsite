@@ -156,9 +156,9 @@ export default function Home() {
       <div className="relative z-10 bg-background">
         <HeroParallax />
         <Portfolio />
-        <Pricing />
         <HowItWorks />
         <SocialProof />
+        <Pricing />
         <FAQ />
         <CTAFinal />
       </div>
