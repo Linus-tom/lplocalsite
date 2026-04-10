@@ -270,7 +270,7 @@ export function CinematicFooter() {
 
           <div
             ref={giantTextRef}
-            className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none"
+            className="footer-giant-bg-text absolute -bottom-[5vh] left-0 w-full text-center whitespace-nowrap z-0 pointer-events-none select-none"
           >
             AG LABS
           </div>
