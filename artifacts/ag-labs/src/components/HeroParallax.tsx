@@ -14,7 +14,8 @@ export function HeroParallax() {
 
   const prefersReducedMotion = useReducedMotion();
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  // Tighter springs — less oscillation, fewer frames to settle
+  const springConfig = { stiffness: 200, damping: 40 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -24,22 +25,12 @@ export function HeroParallax() {
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
     springConfig
   );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
+
+  // Direct scroll-linked transforms (no spring) — cheaper than sprung values
+  const rotateX = useTransform(scrollYProgress, [0, 0.2], [15, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]);
+  const rotateZ = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
+  const translateY = useTransform(scrollYProgress, [0, 0.2], [-700, 500]);
 
   return (
     <div
@@ -71,7 +62,7 @@ export function HeroParallax() {
         }}
         className="will-change-transform"
       >
-        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20 mb-10 lg:mb-20">
+        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20 mb-10 lg:mb-20" style={{ contentVisibility: 'auto' }}>
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -81,7 +72,7 @@ export function HeroParallax() {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row gap-10 lg:gap-20 mb-10 lg:mb-20">
+        <motion.div className="flex flex-row gap-10 lg:gap-20 mb-10 lg:mb-20" style={{ contentVisibility: 'auto' }}>
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -91,7 +82,7 @@ export function HeroParallax() {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20">
+        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20" style={{ contentVisibility: 'auto' }}>
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -128,7 +119,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product w-[30rem] aspect-[4/3] relative flex-shrink-0 rounded-xl overflow-hidden"
+      className="group/product w-[30rem] aspect-[4/3] relative flex-shrink-0 rounded-xl overflow-hidden will-change-transform"
     >
       <a
         href={product.link}
@@ -139,7 +130,9 @@ export const ProductCard = ({
         <img
           src={product.thumbnail}
           height="600"
-          width="600"
+          width="800"
+          loading="lazy"
+          decoding="async"
           className="object-cover object-top absolute h-full w-full inset-0"
           alt={product.title}
         />
