@@ -27,11 +27,11 @@ const cases = [
   },
   {
     sliderName: 'boutique',
-    tag: 'E-commerce',
-    title: 'Boutique Santo Ofício',
-    result: '+85% conversão mobile',
-    link: 'https://santoficio-rv.pages.dev/',
-    img: `${base}boutique%20de%20roupas.png`,
+    tag: 'Templates',
+    title: 'Pack de Templates',
+    result: '+50 modelos prontos',
+    link: '#',
+    img: `${base}templates%202.png`,
   },
   {
     sliderName: 'nutri',
@@ -49,22 +49,7 @@ const cases = [
     link: 'https://loja.agmusic.cloud/',
     img: `${base}agbooks.png`,
   },
-  {
-    sliderName: 'aqua-nature',
-    tag: 'E-commerce',
-    title: 'Aqua Nature',
-    result: '+60% no ticket médio',
-    link: 'https://aqua-nature-rv.pages.dev/',
-    img: `${base}psicnas%20naturais.png`,
-  },
-  {
-    sliderName: 'lp-barber',
-    tag: 'Landing Page',
-    title: 'LP Alcateia Barber',
-    result: '3x mais agendamentos',
-    link: 'https://alcateia-rv.pages.dev/',
-    img: `${base}lp%20barber.png`,
-  },
+
   {
     sliderName: 'ag-plataforma',
     tag: 'Web App',
