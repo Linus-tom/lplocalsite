@@ -71,7 +71,7 @@ export function HeroParallax() {
         }}
         className="will-change-transform"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 lg:space-x-20 mb-10 lg:mb-20">
+        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20 mb-10 lg:mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -81,7 +81,7 @@ export function HeroParallax() {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-10 lg:mb-20 space-x-10 lg:space-x-20">
+        <motion.div className="flex flex-row gap-10 lg:gap-20 mb-10 lg:mb-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -91,7 +91,7 @@ export function HeroParallax() {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 lg:space-x-20">
+        <motion.div className="flex flex-row-reverse gap-10 lg:gap-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
