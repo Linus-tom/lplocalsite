@@ -1,24 +1,12 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, useReducedMotion } from "framer-motion";
 import { projects } from "@/data/projects";
-
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < breakpoint);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, [breakpoint]);
-  return isMobile;
-}
 
 export function HeroParallax() {
   const firstRow = projects.slice(0, 5);
   const secondRow = projects.slice(5, 10);
   const thirdRow = projects.slice(10, 15);
   const ref = useRef(null);
-  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -26,44 +14,37 @@ export function HeroParallax() {
 
   const prefersReducedMotion = useReducedMotion();
 
-  // Lighter springs on mobile to avoid GPU jank
-  const springConfig = isMobile
-    ? { stiffness: 100, damping: 30, mass: 0.5 }
-    : { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  // Reduced travel distance on mobile
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, isMobile ? 400 : 1000]),
+    useTransform(scrollYProgress, [0, 1], [0, 1000]),
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, isMobile ? -400 : -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -1000]),
     springConfig
   );
-  // Skip heavy 3D rotations on mobile entirely
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [isMobile ? 0 : 15, 0]),
+    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [isMobile ? 0.6 : 0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
     springConfig
   );
   const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [isMobile ? 0 : 20, 0]),
+    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [isMobile ? -300 : -700, isMobile ? 200 : 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
 
   return (
     <div
       ref={ref}
-      className={`h-[250vh] sm:h-[280vh] md:h-[300vh] py-20 lg:py-40 overflow-x-hidden antialiased relative flex flex-col self-auto ${
-        isMobile ? '' : '[perspective:1000px] [transform-style:preserve-3d]'
-      }`}
+      className="h-[250vh] sm:h-[280vh] md:h-[300vh] py-20 lg:py-40 overflow-x-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight text-white mb-6">
@@ -146,7 +127,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-60 w-[20rem] md:h-96 md:w-[30rem] relative flex-shrink-0 rounded-xl overflow-hidden will-change-transform"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl overflow-hidden"
     >
       <a
         href={product.link}
