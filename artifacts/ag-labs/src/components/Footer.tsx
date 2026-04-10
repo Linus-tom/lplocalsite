@@ -48,7 +48,7 @@ export function Footer() {
             <a href="#" onClick={scrollToTop} className="hover:text-primary transition-colors">Início</a>
             <a href="#portfolio" className="hover:text-primary transition-colors">Projetos</a>
             <a href="#pricing" className="hover:text-primary transition-colors">Serviços</a>
-            <a href="https://wa.me/5511999999999" className="hover:text-primary transition-colors">WhatsApp</a>
+            <a href="https://wa.me/5564993259857" className="hover:text-primary transition-colors">WhatsApp</a>
           </div>
         </div>
         

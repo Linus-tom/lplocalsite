@@ -57,13 +57,13 @@ export function Pricing() {
               <span className="text-sm text-muted-foreground font-medium uppercase tracking-wider block mb-2">Hospedagem & Suporte</span>
               <div className="flex items-baseline">
                 <span className="text-xl text-muted-foreground font-bold mr-1">R$</span>
-                <span className="text-4xl font-display font-bold text-white">100</span>
+                <span className="text-4xl font-display font-bold text-white">97</span>
                 <span className="text-muted-foreground ml-2">/mês</span>
               </div>
             </div>
             
             <a 
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5564993259857"
               className="block w-full text-center py-4 rounded-md bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg"
             >
               Quero meu site agora →

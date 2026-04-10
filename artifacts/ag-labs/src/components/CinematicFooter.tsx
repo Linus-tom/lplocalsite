@@ -294,7 +294,7 @@ export function CinematicFooter() {
               <div className="flex flex-wrap justify-center gap-4 w-full">
                 <MagneticButton
                   as="a"
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5564993259857"
                   className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group"
                 >
                   <svg className="w-6 h-6 text-primary group-hover:text-foreground transition-colors" viewBox="0 0 24 24" fill="currentColor">
@@ -322,7 +322,7 @@ export function CinematicFooter() {
                 <MagneticButton as="a" href="#pricing" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
                   Serviços
                 </MagneticButton>
-                <MagneticButton as="a" href="https://wa.me/5511999999999" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
+                <MagneticButton as="a" href="https://wa.me/5564993259857" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
                   WhatsApp
                 </MagneticButton>
               </div>
@@ -332,14 +332,7 @@ export function CinematicFooter() {
           <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
 
             <div className="text-muted-foreground text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1">
-              © 2025 AG Labs. Todos os direitos reservados.
-            </div>
-
-            <div className="footer-glass-pill px-6 py-3 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-border/50">
-              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">Feito com</span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-destructive">❤</span>
-              <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">por</span>
-              <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1">AG Labs</span>
+              © 2026 AG Labs. Todos os direitos reservados.
             </div>
 
             <MagneticButton
