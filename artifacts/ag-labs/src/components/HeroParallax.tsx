@@ -47,7 +47,7 @@ export function HeroParallax() {
       style={{ overflowX: 'clip', touchAction: 'pan-y' }}
       className="h-[250vh] sm:h-[280vh] md:h-[300vh] py-20 lg:py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
     >
-      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+      <div className="max-w-7xl relative z-20 mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight text-white mb-6">
           Seu negócio <br /> merece estar <span className="text-primary">online</span>
         </h1>
@@ -69,7 +69,7 @@ export function HeroParallax() {
           translateY,
           opacity,
         }}
-        className="will-change-transform"
+        className="relative z-10 will-change-transform"
       >
         <motion.div className="flex flex-row-reverse gap-10 lg:gap-20 mb-10 lg:mb-20">
           {firstRow.map((product) => (
