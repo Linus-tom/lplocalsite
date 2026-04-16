@@ -58,6 +58,14 @@ const cases = [
     link: 'https://rag.aglabs.api.br/app',
     img: `${base}ag%20labs%202.png`,
   },
+  {
+    sliderName: 'ag-institucional',
+    tag: 'Institucional',
+    title: 'AG Labs — Site Institucional',
+    result: 'Presença digital completa',
+    link: 'https://aglabs.ia.br/',
+    img: `${base}aglabs%20insitucional.png`,
+  },
 ];
 
 export function Portfolio() {
@@ -107,7 +115,7 @@ export function Portfolio() {
             ))}
           </SliderContent>
 
-          <SliderBtnGroup className="mt-3 bg-card/60 border border-border/50 backdrop-blur-md overflow-hidden grid grid-cols-4 md:grid-cols-8 rounded-lg">
+          <SliderBtnGroup className="mt-3 bg-card/60 border border-border/50 backdrop-blur-md overflow-hidden grid grid-cols-4 md:grid-cols-7 rounded-lg">
             {cases.map((item) => (
               <SliderBtn
                 key={item.sliderName}
