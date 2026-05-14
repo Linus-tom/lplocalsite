@@ -6,7 +6,7 @@ import {
   SliderBtn,
 } from '@/components/ui/progressive-carousel';
 
-const base = "https://udcsokdtdqqdnoqozbxh.supabase.co/storage/v1/object/public/heros-lp/";
+const base = "/images/";
 
 const cases = [
   {
@@ -15,7 +15,7 @@ const cases = [
     title: 'Agente de IA Consultivo',
     result: '98% de resolução automática',
     link: 'https://rag.aglabs.api.br/',
-    img: `${base}agente%20ia.png`,
+    img: `${base}agente-ia.png`,
   },
   {
     sliderName: 'barber-pro',
@@ -23,7 +23,7 @@ const cases = [
     title: 'Barber Pro',
     result: '47 barbearias ativas',
     link: 'https://barber.aglabs.ia.br/',
-    img: `${base}barber%20pro.png`,
+    img: `${base}barber-pro.png`,
   },
   {
     sliderName: 'templates',
@@ -31,7 +31,7 @@ const cases = [
     title: 'Pack de Templates',
     result: '+50 modelos prontos',
     link: 'https://templates.aglabs.ia.br/',
-    img: `${base}templates%202.png`,
+    img: `${base}templates-2.png`,
   },
   {
     sliderName: 'nutri',
@@ -39,7 +39,7 @@ const cases = [
     title: 'LP Gabi Nutri',
     result: '+ leads em poucos dias',
     link: 'https://gabinutri.com.br/',
-    img: `${base}lp%20nutri.png`,
+    img: `${base}lp-nutri.png`,
   },
   {
     sliderName: 'agbooks',
@@ -49,14 +49,13 @@ const cases = [
     link: 'https://loja.agmusic.cloud/',
     img: `${base}agbooks.png`,
   },
-
   {
     sliderName: 'ag-plataforma',
     tag: 'Web App',
     title: 'AG Labs — Plataforma IA',
     result: 'Automações 24/7 ativas',
     link: 'https://rag.aglabs.api.br/app',
-    img: `${base}ag%20labs%202.png`,
+    img: `${base}ag-labs-2.png`,
   },
   {
     sliderName: 'ag-institucional',
@@ -64,7 +63,7 @@ const cases = [
     title: 'AG Labs — Site Institucional',
     result: 'Presença digital completa',
     link: 'https://aglabs.ia.br/',
-    img: `${base}aglabs%20insitucional.png`,
+    img: `${base}aglabs-insitucional.png`,
   },
 ];
 
@@ -90,11 +89,8 @@ export function Portfolio() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    loading="eager"
-                    decoding="async"
-                    crossOrigin="anonymous"
+                    loading="lazy"
                     className="w-full h-full object-cover object-top"
-                    style={{ transform: 'translateZ(0)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
