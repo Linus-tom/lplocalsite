@@ -90,7 +90,11 @@ export function Portfolio() {
                   <img
                     src={item.img}
                     alt={item.title}
+                    loading="eager"
+                    decoding="async"
+                    crossOrigin="anonymous"
                     className="w-full h-full object-cover object-top"
+                    style={{ transform: 'translateZ(0)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">

@@ -44,8 +44,8 @@ export function HeroParallax() {
   return (
     <div
       ref={ref}
-      style={{ overflowX: 'clip', touchAction: 'pan-y' }}
-      className="h-[300vh] sm:h-[300vh] md:h-[300vh] pt-20 pb-40 sm:pb-20 lg:py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
+      style={{ overflowX: 'hidden', touchAction: 'pan-y' }}
+      className="h-[300vh] sm:h-[300vh] md:h-[300vh] pt-20 pb-40 sm:pb-20 lg:py-40 antialiased relative flex flex-col self-auto"
     >
       <div className="max-w-7xl relative z-20 mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
         <h1 className="text-5xl md:text-7xl font-bold font-display tracking-tight text-white mb-6">
@@ -62,6 +62,7 @@ export function HeroParallax() {
         </a>
       </div>
 
+      <div style={{ perspective: '1000px' }}>
       <motion.div
         style={prefersReducedMotion ? {} : {
           rotateX,
@@ -102,6 +103,7 @@ export function HeroParallax() {
           ))}
         </motion.div>
       </motion.div>
+      </div>
     </div>
   );
 }
@@ -140,7 +142,11 @@ export const ProductCard = ({
           src={product.thumbnail}
           height="600"
           width="600"
+          loading="eager"
+          decoding="async"
+          crossOrigin="anonymous"
           className="object-cover object-top absolute h-full w-full inset-0"
+          style={{ transform: 'translateZ(0)' }}
           alt={product.title}
         />
       </a>
